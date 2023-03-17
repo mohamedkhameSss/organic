@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className='w-100 bg-light  p-5 position-relative mt-5'>
       <div className='container'>
-        <div className='bg-success position-absolute top--50 p-3 p-md-5 rounded rounded-md-pill  m-auto  row justify-content-around text-white align-items-center'>
+        <div className='bg-success position-absolute top--50 p-4 p-md-5 text-center text-md-start rounded-pill  m-auto  row justify-content-around text-white align-items-center'>
           <div className='col-lg-5 '>
             <h2>SIGN UP FOR NEWSLETTER</h2>
             <p>

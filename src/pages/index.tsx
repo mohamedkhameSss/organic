@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
-import { motion } from "framer-motion";
+import { motion, useMotionValueEvent } from "framer-motion";
+import { useScroll } from "framer-motion";
 // import styles from '@/styles/Home.module.css'
 import Navbar from "@/compnents/Navbar";
 import { useContext, useEffect } from "react";
@@ -55,15 +56,18 @@ type products = {
 }[];
 export default function Home() {
   const { products } = useContext(AppContext);
+  const { scrollY } = useScroll();
 
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    console.log("Page scroll: ", latest);
+  });
+  const { scrollYProgress } = useScroll();
   return (
     <>
       <div className=' container mt-5'>
+        <motion.div style={{ scaleX: scrollYProgress }} />
         <motion.div
-          className='container'
-          variants={item}
-          initial='hidden'
-          animate='visible'
+          
         >
           <div className='mb-2 h2'>
             {" "}

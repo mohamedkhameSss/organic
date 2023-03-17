@@ -52,7 +52,7 @@ const Navbar = () => {
             <span className='navbar-toggler-icon'></span>
           </button>
           <div
-            className='offcanvas offcanvas-start bg-success ps-3  '
+            className='offcanvas offcanvas-start bg-success ps-3 w-50 '
             tabIndex={-1}
             id='navbarOffcanvasLg'
             aria-labelledby='navbarOffcanvasLgLabel'
@@ -66,11 +66,11 @@ const Navbar = () => {
                 <div className='dropdown-content'>
                   {Cateory.map((item, index) => (
                     <>
-                      <a className='px-3' href='#' key={item.id*index}>
+                      <a className='px-3' href='#' key={item.id * index}>
                         <span className='p-2'>{item.icon}</span>
                         {item.name}
                       </a>
-                      <hr key={index+10} />
+                      <hr key={index + 10} />
                     </>
                   ))}
                 </div>
@@ -78,7 +78,6 @@ const Navbar = () => {
               <ul className='navbar-nav col-6  mb-2 mb-lg-0 d-flex justify-content-around   '>
                 <li key={3} className='nav-item '>
                   <Link
-                    
                     className='nav-link active text-white fw-bold'
                     aria-current='page'
                     href='/'
@@ -88,7 +87,6 @@ const Navbar = () => {
                 </li>
                 <li key={4} className='nav-item'>
                   <Link
-                    
                     className='nav-link text-white fw-bold'
                     href='/ourServices'
                   >
@@ -97,17 +95,12 @@ const Navbar = () => {
                 </li>
 
                 <li key={5} className='nav-item'>
-                  <Link
-                    
-                    className='nav-link text-white fw-bold'
-                    href='/about'
-                  >
+                  <Link className='nav-link text-white fw-bold' href='/about'>
                     About
                   </Link>
                 </li>
                 <li key={6} className='nav-item'>
                   <Link
-                    
                     className='nav-link text-white fw-bold'
                     href='/testimonials'
                   >
@@ -115,11 +108,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li key={7} className='nav-item'>
-                  <Link
-                    
-                    className='nav-link text-white fw-bold'
-                    href='/news'
-                  >
+                  <Link className='nav-link text-white fw-bold' href='/news'>
                     News
                   </Link>
                 </li>

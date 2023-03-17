@@ -25,7 +25,7 @@ const SwiperIndvidual = ({
   children,
   items,
   slidesPerView = 3,
-  spaceBetween = 5,
+  spaceBetween = 15,
   direction,
 }: Props) => {
   // const { products } = useContext(AppContext);
