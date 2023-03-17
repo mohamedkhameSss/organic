@@ -175,7 +175,7 @@ export default function Home() {
             </SwiperCarosal>
             <div className='d-none d-md-block'>
               <h3 className='text-start mb-3  '> New Latest Product</h3>
-              <SwiperIndvidual items={products} >
+              <SwiperIndvidual items={products}>
                 <SingleCardStar name='Fruits' img='/category1.png' />
                 <SingleCardStar name='Fruits' img='/category2.png' />
                 <SingleCardStar name='Fruits' img='/category3.png' />
@@ -272,10 +272,10 @@ export default function Home() {
           The demand for organic food is growing at a remarkable rate. Consumers
           have made it.
         </p>
-        <SwiperIndvidual items={products} spaceBetween={5} slidesPerView={4}>
+        <SwiperIndvidual items={products} spaceBetween={15} slidesPerView={4}>
           <SingleCardStar name='Fruits' img='/category1.png' />
-          <SingleCardStar name='Fruits' img='/category2.png' />
-          <SingleCardStar name='Fruits' img='/category3.png' />
+          <SingleCardStar name='milk' img='/category2.png' />
+          <SingleCardStar name='rice' img='/category3.png' />
           <SingleCardStar name='Fruits' img='/category3.png' />
         </SwiperIndvidual>
       </div>
@@ -284,9 +284,9 @@ export default function Home() {
         <h2>to help support.</h2>
         <SwiperIndvidual items={products} spaceBetween={5} slidesPerView={4}>
           <SingleCardStar name='Fruits' img='/category1.png' />
-          <SingleCardStar name='Fruits' img='/category2.png' />
-          <SingleCardStar name='Fruits' img='/category3.png' />
-          <SingleCardStar name='Fruits' img='/category3.png' />
+          <SingleCardStar name='vegetabels' img='/category2.png' />
+          <SingleCardStar name='Salad' img='/category3.png' />
+          <SingleCardStar name='fresh drinks' img='/category3.png' />
         </SwiperIndvidual>
       </div>
       <div className='text-center my-5'>.</div>
