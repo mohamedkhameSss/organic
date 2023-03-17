@@ -4,8 +4,8 @@ const Footer = () => {
   return (
     <div className='w-100 bg-light  p-5 position-relative mt-5'>
       <div className='container'>
-        <div className='maincolor position-absolute top--50 p-5 rounded-pill    row justify-content-around text-white align-items-center'>
-          <div className="col-lg-5">
+        <div className='bg-success position-absolute top--50 p-3 p-md-5 rounded rounded-md-pill    row justify-content-around text-white align-items-center'>
+          <div className='col-lg-5 '>
             <h2>SIGN UP FOR NEWSLETTER</h2>
             <p>
               Agriculture is the art and science of cultivating the soil,
@@ -15,13 +15,13 @@ const Footer = () => {
           <div className=' col-lg-7'>
             <form className=' d-flex position-relative ' role='search'>
               <input
-                className='form-control w-100  me-2 px-5 py-3 rounded-pill text-start fira'
+                className='form-control   me-2 px-md-5 py-md-3 rounded-pill text-start fira'
                 type='search'
                 placeholder='Enter Your Email address....'
                 aria-label='Search'
               />
               <button
-                className='btn btn-danger  searchBtn  py-3 px-5  position-absolute rounded-pill me-2 end-0'
+                className='btn btn-danger  searchBtn  py-md-3 px-md-5  position-absolute rounded-pill me-2 end-0'
                 type='submit'
               >
                 Subscribe

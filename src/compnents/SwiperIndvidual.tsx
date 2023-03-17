@@ -11,6 +11,7 @@ import {
   Autoplay,
 } from "swiper";
 import "swiper/css/navigation";
+import style from "../styles/SwiperIndvidual.module.css";
 import { ArrowFunction } from "typescript";
 
 type Props = {
@@ -18,17 +19,19 @@ type Props = {
   items: products | undefined;
   slidesPerView?: number | undefined;
   spaceBetween?: number | undefined;
+  direction?: "horizontal" | "vertical";
 };
 const SwiperIndvidual = ({
   children,
   items,
   slidesPerView = 3,
-  spaceBetween = 25,
+  spaceBetween = 5,
+  direction,
 }: Props) => {
   // const { products } = useContext(AppContext);
   // const [dataItem, setDataItem] = useState(items);
   const cloneItems = items?.map((item, index) => (
-    <SwiperSlide key={index}>
+    <SwiperSlide key={index} className={style["swiper-slide"]}>
       {/* {<SingleCard name={item.name} img={item.img} />} */}
       {children[index]}
     </SwiperSlide>
@@ -49,7 +52,8 @@ const SwiperIndvidual = ({
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
-        className={"m-auto "}
+        direction={direction}
+        className={`m-auto ${style.swiper}`}
         pagination={{ clickable: true }}
       >
         {cloneItems}
