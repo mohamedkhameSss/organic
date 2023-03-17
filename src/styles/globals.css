@@ -236,8 +236,8 @@ hr {
   
 }
 .width2 {
-  width: 70%;
-  transition: all .6s;
+  width: 50%;
+  transition: all 1s;
 
 }
 .width2:hover {

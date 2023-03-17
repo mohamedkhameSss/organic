@@ -4,7 +4,7 @@ import React from "react";
 const SingleCard = ({ name = " Fresh Nuts", img = "/category3.png" }) => {
   return (
     <>
-      <div className='col display my-2'>
+      <div className='col display my-2 shadow'>
         <div className='p-3 bg-white overflow-hidden rounded position-relative over'>
           {/* <svg
             xmlns='http://www.w3.org/2000/svg'

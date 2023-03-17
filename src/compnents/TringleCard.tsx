@@ -63,7 +63,7 @@ const TringleCard = ({
   return (
     <>
       <div
-        className={` rounded ${className}bg-white rounded justify-content-around rotateTringle d-flex p-1 m-1`}
+        className={` rounded ${className}bg-white rounded justify-content-around rotateTringle d-flex p-1 m-1 shadow`}
       >
         {/* <svg
             xmlns='http://www.w3.org/2000/svg'

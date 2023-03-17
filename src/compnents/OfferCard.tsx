@@ -23,15 +23,15 @@ const OfferCard = ({
                 src='/arrow-right-circle.svg'
                 alt=''
               /> */}
-               <Image
-              className='d-none arrowDisplay'
-              // fill={true}
-              width='30'
-              height='30'
-              // sizes='(max-width: 768px) 33vw, (max-width: 1200px) 50vw, 33vw'
-              src='/arrow-right-circle.svg'
-              alt=''
-            />
+              <Image
+                className='d-none arrowDisplay'
+                // fill={true}
+                width='20'
+                height='20'
+                // sizes='(max-width: 768px) 33vw, (max-width: 1200px) 50vw, 33vw'
+                src='/arrow-right-circle.svg'
+                alt=''
+              />
             </button>
           </div>
           <div className='d-flex align-items-end  '>
