@@ -115,8 +115,8 @@ const SingleCardStar = ({
   );
   return (
     <>
-      <div className={`col display ${className} my-2 shadow `}>
-        <div className='p-3 bg-white rounded position-relative overflow-hidden '>
+      <div className={`col display ${className} my-2  `}>
+        <div className='p-3 bg-white rounded position-relative overflow-hidden shadow'>
           {/* <svg
             xmlns='http://www.w3.org/2000/svg'
             width='120'

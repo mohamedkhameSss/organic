@@ -8,7 +8,7 @@ const DaynamicTabs = ({
   Cards4 = <CardStars numberOfCards={2} />,
 }) => {
   return (
-    <div className='my-5 text-center '>
+    <div className='my-5 text-center container'>
       <div>
         <h2>
           {" "}
