@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 type prop = {
   name: string;
@@ -6,7 +7,7 @@ type prop = {
 };
 const SingleCardStar = ({
   name = " Fruits",
-  img = "/category1.png",
+  img = "/category3.png",
   className = "",
 }: prop) => {
   let stars = (): JSX.Element[] => {
@@ -320,7 +321,16 @@ const SingleCardStar = ({
             ></path>
           </svg>
           <div className='px-2 m-auto'>
-            <img className='position-relative ' src={img} alt='' />
+            {/* <img className='position-relative ' src={img} alt='' /> */}
+            <Image
+              className='  py-3 position-relative'
+              // fill={true}
+              width='100'
+              height='119'
+              // sizes='(max-width: 768px) 33vw, (max-width: 1200px) 50vw, 33vw'
+              src={img}
+              alt=''
+            />
           </div>
           <h5> {name}</h5>
           {icons}

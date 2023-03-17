@@ -146,10 +146,10 @@ nav {
   height: 0;
   position: fixed;
   background-color: #f1f1f1;
-  min-width: 160px;
+  /* min-width: 160px; */
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  transition: all .5s;
+  transition: all 1s;
   
 }
 
@@ -170,7 +170,7 @@ nav {
 .dropdown:hover .dropdown-content {display: block;
    
 
-height: 50%;
+height: 100%;
 
 }
 
@@ -337,6 +337,13 @@ color: gold !important;
   }
   .text-green{
     color: #35A212;
+  }
+  .top--50{
+    width: 90%;
+    top: -20%;
+    left: 5%;
+    right: 5%;
+    
   }
 /* .maxHeight {
   max-height: 325px !important;

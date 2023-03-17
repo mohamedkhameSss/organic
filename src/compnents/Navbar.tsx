@@ -7,11 +7,19 @@ const Navbar = () => {
   useEffect(() => {
     function setfixed() {
       scrollY > 250 ? setfix(true) : setfix(false);
-      
     }
 
     addEventListener("scroll", setfixed);
   }, []);
+  const Cateory = [
+    { name: "Grecory & Frozen", icon: "�", id: 21211 },
+    { name: "Fresh Fruits", icon: "�", id: 23233 },
+    { name: "Fresh Fruits", icon: "�", id: 23232327777733 },
+    { name: "Fresh Fruits", icon: "�", id: 234234233 },
+    { name: "Fresh Fruits", icon: "�", id: 23546456233 },
+    { name: "Fresh Fruits", icon: "�", id: 2378756233 },
+    { name: "Fresh Fruits", icon: "�", id: 231233 },
+  ];
 
   return (
     <>
@@ -26,7 +34,7 @@ const Navbar = () => {
             href='#'
           >
             <div>
-              <img
+              <Image
                 src='/logo-mobile.png'
                 width={175}
                 height={100}
@@ -56,14 +64,21 @@ const Navbar = () => {
                   <i className='fa-solid fa-bars'></i> Browse Categories
                 </button>
                 <div className='dropdown-content'>
-                  <a href='#'>Link 1</a>
-                  <a href='#'>Link 2</a>
-                  <a href='#'>Link 3</a>
+                  {Cateory.map((item, index) => (
+                    <>
+                      <a className='px-3' href='#' key={item.id*index}>
+                        <span className='p-2'>{item.icon}</span>
+                        {item.name}
+                      </a>
+                      <hr key={index+10} />
+                    </>
+                  ))}
                 </div>
               </div>
               <ul className='navbar-nav col-6  mb-2 mb-lg-0 d-flex justify-content-around   '>
-                <li className='nav-item '>
+                <li key={3} className='nav-item '>
                   <Link
+                    
                     className='nav-link active text-white fw-bold'
                     aria-current='page'
                     href='/'
@@ -71,40 +86,40 @@ const Navbar = () => {
                     Home
                   </Link>
                 </li>
-                <li className='nav-item'>
+                <li key={4} className='nav-item'>
                   <Link
+                    
                     className='nav-link text-white fw-bold'
                     href='/ourServices'
                   >
                     Services
                   </Link>
                 </li>
-                {/* <li className="nav-item dropdown">
-          <Link className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </Link>
-          <ul className="dropdown-menu">
-            <li><Link className="dropdown-item" href="/about">about</Link></li>
-            <li><Link className="dropdown-item" href="#">Another action</Link></li>
-            <li><hr className="dropdown-divider" /></li>
-            <li><Link className="dropdown-item" href="#">Something else here</Link></li>
-          </ul>
-        </li> */}
-                <li className='nav-item'>
-                  <Link className='nav-link text-white fw-bold' href='/about'>
+
+                <li key={5} className='nav-item'>
+                  <Link
+                    
+                    className='nav-link text-white fw-bold'
+                    href='/about'
+                  >
                     About
                   </Link>
                 </li>
-                <li className='nav-item'>
+                <li key={6} className='nav-item'>
                   <Link
+                    
                     className='nav-link text-white fw-bold'
                     href='/testimonials'
                   >
                     Testimonials
                   </Link>
                 </li>
-                <li className='nav-item'>
-                  <Link className='nav-link text-white fw-bold' href='/news'>
+                <li key={7} className='nav-item'>
+                  <Link
+                    
+                    className='nav-link text-white fw-bold'
+                    href='/news'
+                  >
                     News
                   </Link>
                 </li>

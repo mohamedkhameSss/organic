@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const OfferCard = ({
@@ -17,16 +18,34 @@ const OfferCard = ({
             <p className='text-muted'>{offerDetails}.</p>
             <button className='btn btn-outline-danger rounded-pill width2 d-flex justify-content-between align-items-center'>
               <span> Shop Now </span>
-              <img
+              {/* <img
                 className='d-none arrowDisplay'
                 src='/arrow-right-circle.svg'
                 alt=''
-              />
+              /> */}
+               <Image
+              className='d-none arrowDisplay'
+              // fill={true}
+              width='30'
+              height='30'
+              // sizes='(max-width: 768px) 33vw, (max-width: 1200px) 50vw, 33vw'
+              src='/arrow-right-circle.svg'
+              alt=''
+            />
             </button>
           </div>
           <div className='d-flex align-items-end  '>
             {" "}
-            <img className='bounce w-100' src={offerImage} alt='' />
+            {/* <img className='bounce w-100' src={offerImage} alt='' /> */}
+            <Image
+              className='bounce w-100'
+              // fill={true}
+              width='80'
+              height='119'
+              // sizes='(max-width: 768px) 33vw, (max-width: 1200px) 50vw, 33vw'
+              src={offerImage}
+              alt=''
+            />
           </div>
         </div>
       </div>

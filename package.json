@@ -1,11 +1,12 @@
 {
   "name": "organio",
-   "homepage": "https://mohamedkhameSss.github.io/organic",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
     "lint": "next lint"
   },
@@ -27,10 +28,12 @@
     "next-reveal": "^1.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "sharp": "^0.31.3",
     "swiper": "^9.1.0",
     "typescript": "4.9.5"
   },
   "devDependencies": {
     "@types/bootstrap": "^5.2.6"
+    
   }
 }

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const TringleCard = ({
@@ -79,7 +80,11 @@ const TringleCard = ({
             />
           </svg>{" "} */}
         <div className='w-50 imgRotateTringle'>
-          <img className=' py-2 w-100 px-3' src={img} alt='' />
+          <Image className=' py-2 w-100 px-1'
+          sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+          width='108'
+          height='84'
+          src={img} alt='' />
         </div>
         <div className='m1-2'>
           <div className='text-bold'> {name}</div>

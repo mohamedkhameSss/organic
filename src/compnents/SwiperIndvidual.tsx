@@ -49,7 +49,7 @@ const SwiperIndvidual = ({
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
-        className={"m-auto"}
+        className={"m-auto "}
         pagination={{ clickable: true }}
       >
         {cloneItems}

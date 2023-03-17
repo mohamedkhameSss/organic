@@ -9,7 +9,7 @@ const SearchSection = () => {
         <div className='row align-items-center'>
     <Link className="navbar-brand col-2 d-none d-lg-flex" href="#">
       <div>
-      <img
+      <Image
       src="/logo-mobile.png"
       width={175}
       height={100}

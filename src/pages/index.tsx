@@ -18,6 +18,7 @@ import "swiper/css/scrollbar";
 import SingleCardStar from "@/compnents/SingleCardStar";
 import TringleCard from "@/compnents/TringleCard";
 import SwiperIndvidual from "@/compnents/SwiperIndvidual";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 const container = {
@@ -118,32 +119,67 @@ export default function Home() {
         <div className='row row-cols-1  row-cols-md-2 my-3 g-3 text-center w-100'>
           <div className='col  '>
             <Link href={""}>
-              <img
+              <Image
+                width='452'
+                height='524'
                 className='img-fluid rounded'
-                src='https://demo.casethemes.net/organio/wp-content/uploads/2021/04/video-intro1.jpg'
+                src='/video-intro1.jpg'
+                alt=''
               />
             </Link>
           </div>
           <div className='col pb-5 noMarginBottom '>
             <h3 className='text-start mb-3'>Best Sellers</h3>
             <SwiperCarosal items={products} grid={{ rows: 2 }}>
-              <TringleCard name='Fruits' img='category1.png' className='half' />
+              <TringleCard
+                name='Fruits'
+                img='/category1.png'
+                className='half'
+              />
 
-              <TringleCard name='Fruits' img='category5.png' className='half' />
-              <TringleCard name='Fruits' img='category1.png' className='half' />
-              <TringleCard name='Fruits' img='category1.png' className='half' />
-              <TringleCard name='Fruits' img='category1.png' className='half' />
-              <TringleCard name='Fruits' img='category1.png' className='half' />
-              <TringleCard name='Fruits' img='category1.png' className='half' />
-              <TringleCard name='Fruits' img='category1.png' className='half' />
+              <TringleCard
+                name='Fruits'
+                img='/category5.png'
+                className='half'
+              />
+              <TringleCard
+                name='Fruits'
+                img='/category1.png'
+                className='half'
+              />
+              <TringleCard
+                name='Fruits'
+                img='/category1.png'
+                className='half'
+              />
+              <TringleCard
+                name='Fruits'
+                img='/category1.png'
+                className='half'
+              />
+              <TringleCard
+                name='Fruits'
+                img='/category1.png'
+                className='half'
+              />
+              <TringleCard
+                name='Fruits'
+                img='/category1.png'
+                className='half'
+              />
+              <TringleCard
+                name='Fruits'
+                img='/category1.png'
+                className='half'
+              />
             </SwiperCarosal>
             <div className='d-none d-md-block'>
               <h3 className='text-start mb-3  '> New Latest Product</h3>
               <SwiperIndvidual items={products}>
-                <SingleCardStar name='Fruits' img='category1.png' />
-                <SingleCardStar name='Fruits' img='category2.png' />
-                <SingleCardStar name='Fruits' img='category3.png' />
-                <SingleCardStar name='Fruits' img='category3.png' />
+                <SingleCardStar name='Fruits' img='/category1.png' />
+                <SingleCardStar name='Fruits' img='/category2.png' />
+                <SingleCardStar name='Fruits' img='/category3.png' />
+                <SingleCardStar name='Fruits' img='/category3.png' />
               </SwiperIndvidual>
             </div>
           </div>
@@ -162,7 +198,7 @@ export default function Home() {
                 viewBox='0 0 16 16'
               >
                 <path
-                  fill-rule='evenodd'
+                  fillRule='evenodd'
                   d='M11.5 1.246c.832-.855 2.913.642 0 2.566-2.913-1.924-.832-3.421 0-2.566ZM9 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h10s1 0 1-1-1-4-6-4-6 3-6 4Zm13.5-8.09c1.387-1.425 4.855 1.07 0 4.277-4.854-3.207-1.387-5.702 0-4.276ZM15 2.165c.555-.57 1.942.428 0 1.711-1.942-1.283-.555-2.281 0-1.71Z'
                 />
               </svg>
@@ -229,7 +265,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='text-center my-5 container'>
+      <div className='text-center my-5 pb-5 container'>
         <h2> Discounts of the Weekly Products</h2>
         <p>
           {" "}
@@ -237,22 +273,23 @@ export default function Home() {
           have made it.
         </p>
         <SwiperIndvidual items={products} spaceBetween={50} slidesPerView={4}>
-          <SingleCardStar name='Fruits' img='category1.png' />
-          <SingleCardStar name='Fruits' img='category2.png' />
-          <SingleCardStar name='Fruits' img='category3.png' />
-          <SingleCardStar name='Fruits' img='category3.png' />
+          <SingleCardStar name='Fruits' img='/category1.png' />
+          <SingleCardStar name='Fruits' img='/category2.png' />
+          <SingleCardStar name='Fruits' img='/category3.png' />
+          <SingleCardStar name='Fruits' img='/category3.png' />
         </SwiperIndvidual>
       </div>
       <div className='text-center my-5 container'>
         <h2> We have awesome team member </h2>
         <h2>to help support.</h2>
         <SwiperIndvidual items={products} spaceBetween={50} slidesPerView={4}>
-          <SingleCardStar name='Fruits' img='category1.png' />
-          <SingleCardStar name='Fruits' img='category2.png' />
-          <SingleCardStar name='Fruits' img='category3.png' />
-          <SingleCardStar name='Fruits' img='category3.png' />
+          <SingleCardStar name='Fruits' img='/category1.png' />
+          <SingleCardStar name='Fruits' img='/category2.png' />
+          <SingleCardStar name='Fruits' img='/category3.png' />
+          <SingleCardStar name='Fruits' img='/category3.png' />
         </SwiperIndvidual>
       </div>
+      <div className='text-center my-5'>.</div>
     </>
   );
 }

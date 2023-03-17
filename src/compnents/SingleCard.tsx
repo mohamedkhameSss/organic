@@ -1,10 +1,11 @@
+import Image from "next/image";
 import React from "react";
 
 const SingleCard = ({ name = " Fresh Nuts", img = "/category3.png" }) => {
   return (
     <>
       <div className='col display my-2'>
-        <div className='p-3 bg-white rounded position-relative overflow-hidden'>
+        <div className='p-3 bg-white overflow-hidden rounded position-relative over'>
           {/* <svg
             xmlns='http://www.w3.org/2000/svg'
             width='120'
@@ -208,7 +209,15 @@ const SingleCard = ({ name = " Fresh Nuts", img = "/category3.png" }) => {
             ></path>
           </svg>
           <div>
-            <img className='  py-3 position-relative' src={img} alt='' />
+            <Image
+              className='  py-3 position-relative'
+              // fill={true}
+              width='100'
+              height='119'
+              // sizes='(max-width: 768px) 33vw, (max-width: 1200px) 50vw, 33vw'
+              src={img}
+              alt=''
+            />
           </div>
           <h5> {name}</h5>
         </div>
