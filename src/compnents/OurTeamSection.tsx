@@ -10,10 +10,13 @@ const OurTeamSection = () => {
       <div className='text-center my-5 container'>
         <h2> We have awesome team member </h2>
         <h2>to help support.</h2>
-        <SwiperIndvidual items={products} spaceBetween={15} slidesPerView={4}>
+        <SwiperIndvidual items={products} spaceBetween={5} slidesPerView={5}>
           <SingleCardStar name='Fruits' img='/category1.png' />
           <SingleCardStar name='vegetabels' img='/category2.png' />
           <SingleCardStar name='Salad' img='/category3.png' />
+          <SingleCardStar name='fresh drinks' img='/category3.png' />
+          <SingleCardStar name='fresh drinks' img='/category3.png' />
+          <SingleCardStar name='fresh drinks' img='/category3.png' />
           <SingleCardStar name='fresh drinks' img='/category3.png' />
         </SwiperIndvidual>
       </div>

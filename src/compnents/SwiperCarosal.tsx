@@ -36,34 +36,20 @@ const SwiperCarosal = ({ children, items, grid }: Props) => {
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Grid, Autoplay]}
         spaceBetween={10}
-        slidesPerView={2}
         // navigation
+
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
+          reverseDirection: false,
         }}
-        pagination={{ clickable: true }}
-        grid={grid}
+        pagination={{ clickable: true, dynamicBullets: true }}
+        breakpoints={{
+          600: { slidesPerView: 2, grid: { rows: 1 } },
+          1200: { slidesPerView: 2, grid: { rows: 2 } },
+        }}
         className={`${styles.swiper}`}
       >
-        <ul className='pagination justify-content-end'>
-          <li
-            className='page-item'
-            role='button'
-            aria-label='Next slide'
-            aria-controls='swiper-wrapper-8592ecea410285cc4'
-            aria-disabled='false'
-          >
-            <a className='page-link'>Previous</a>
-          </li>
-
-          <li className='page-item'>
-            <a className='page-link' href='#'>
-              Next
-            </a>
-          </li>
-        </ul>
-
         {cloneItems}
       </Swiper>
     </>

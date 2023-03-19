@@ -11,7 +11,7 @@ const MostPopular = () => {
   const { products } = useContext(AppContext);
   return (
     <>
-      <div className='text-center container'>
+      <div className='text-center m-auto container'>
         <h2>
           {" "}
           Most Popular & New <span className='text-success'> Organic Food</span>
@@ -22,7 +22,7 @@ const MostPopular = () => {
           have made it want organic produce and every sector of the food.
         </p>
       </div>
-      <div className='row row-cols-1  row-cols-md-2 my-3 g-3 text-center w-100'>
+      <div className='row row-cols-1  m row-cols-md-2 my-3 g-3 text-center w-100'>
         <div className='col  '>
           <Link href={""}>
             <Image
@@ -36,18 +36,17 @@ const MostPopular = () => {
         </div>
         <div className='col pb-5 noMarginBottom '>
           <h3 className='text-start mb-3'>Best Sellers</h3>
-          <SwiperCarosal items={products} grid={{ rows: 2 }}>
+          <SwiperCarosal items={products}>
             <TringleCard name='Fruits' img='/category1.png' className='half' />
-
             <TringleCard name='Fruits' img='/category5.png' className='half' />
-            <TringleCard name='Fruits' img='/category1.png' className='half' />
-            <TringleCard name='Fruits' img='/category1.png' className='half' />
-            <TringleCard name='Fruits' img='/category1.png' className='half' />
-            <TringleCard name='Fruits' img='/category1.png' className='half' />
-            <TringleCard name='Fruits' img='/category1.png' className='half' />
+            <TringleCard name='Fruits' img='/category2.png' className='half' />
+            <TringleCard name='gang' img='/category3.png' className='half' />
+            <TringleCard name='mang' img='/category4.png' className='half' />
+            <TringleCard name='sang' img='/category6.png' className='half' />
+            <TringleCard name='wang' img='/category2.png' className='half' />
             <TringleCard name='Fruits' img='/category1.png' className='half' />
           </SwiperCarosal>
-          <div className='d-none d-md-block'>
+          <div className=''>
             <h3 className='text-start  '> New Latest Product</h3>
             <SwiperIndvidual items={products}>
               <SingleCardStar name='Fruits' img='/category1.png' />

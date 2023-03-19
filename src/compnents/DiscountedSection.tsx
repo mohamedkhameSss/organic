@@ -14,7 +14,10 @@ const DiscountedSection = () => {
           The demand for organic food is growing at a remarkable rate. Consumers
           have made it.
         </p>
-        <SwiperIndvidual items={products} spaceBetween={15} slidesPerView={4}>
+        <SwiperIndvidual items={products} spaceBetween={10} slidesPerView={4}>
+          <SingleCardStar name='Fruits' img='/category1.png' />
+          <SingleCardStar name='Fruits' img='/category1.png' />
+          <SingleCardStar name='Fruits' img='/category1.png' />
           <SingleCardStar name='Fruits' img='/category1.png' />
           <SingleCardStar name='milk' img='/category2.png' />
           <SingleCardStar name='rice' img='/category3.png' />

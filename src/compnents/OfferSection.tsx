@@ -1,38 +1,51 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import OfferCard from "./OfferCard";
 
 import { useContext } from "react";
 import { AppContext } from "./AppContextApi";
-import { motion } from "framer-motion";
+import { motion, useMotionValueEvent } from "framer-motion";
+import { useScroll } from "framer-motion";
 
-const container = {
-  hidden: { opacity: 1, scale: 0 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      delayChildren: 0.3,
-      staggerChildren: 0.2,
-    },
-  },
-};
+// const container = {
+//   hidden: { opacity: 1, scale: 0 },
+//   visible: {
+//     opacity: 1,
+//     scale: 1,
+//     transition: {
+//       delayChildren: 0.3,
+//       staggerChildren: 0.2,
+//     },
+//   },
+// };
 
-const item = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-  },
-};
+// const item = {
+//   hidden: { y: 20, opacity: 0 },
+//   visible: {
+//     y: 0,
+//     opacity: 1,
+//   },
+// };
 
 const OfferSection = () => {
-  const scrollRef = useRef(null);
+  const [item, setitem] = useState({
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  });
+  const [container, setcontainer] = useState({});
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    console.log("Page scroll: ", latest);
+  });
   const { products } = useContext(AppContext);
   useEffect(() => {
-    container;
-    item;
+    setitem(item);
+    setcontainer(container);
   }, []);
 
   return (

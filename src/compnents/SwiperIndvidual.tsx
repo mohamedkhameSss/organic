@@ -25,13 +25,16 @@ const SwiperIndvidual = ({
   children,
   items,
   slidesPerView = 3,
-  spaceBetween = 15,
+  spaceBetween = 10,
   direction,
 }: Props) => {
   // const { products } = useContext(AppContext);
   // const [dataItem, setDataItem] = useState(items);
   const cloneItems = items?.map((item, index) => (
-    <SwiperSlide key={index} className={style["swiper-slide"]}>
+    <SwiperSlide
+      key={index}
+      className={`${style["swiper-slide"]} `}
+    >
       {/* {<SingleCard name={item.name} img={item.img} />} */}
       {children[index]}
     </SwiperSlide>
@@ -45,16 +48,26 @@ const SwiperIndvidual = ({
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={spaceBetween}
-        slidesPerView={slidesPerView}
+        breakpoints={{
+          400: { slidesPerView: 1 },
+          682: { slidesPerView: 2 },
+          980: { slidesPerView: 3 },
+          1200: { slidesPerView },
+        }}
+        // loop={true}
         // navigation
+        navigation={{
+          nextEl: '.swiper',
+        }}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
-          pauseOnMouseEnter: true,
+          // pauseOnMouseEnter: true,
+          reverseDirection: false,
         }}
-        direction={direction}
-        className={`m-auto ${style.swiper}`}
-        pagination={{ clickable: true }}
+        // direction={direction}
+        className={`m-auto ${style.swiper} `}
+        pagination={{ clickable: true, dynamicBullets: true }}
       >
         {cloneItems}
       </Swiper>

@@ -7,9 +7,9 @@ const OfferCard = ({
   offerImage = "/banner1.png",
 }) => {
   return (
-    <div className='col  '>
+    <div className='col   '>
       <div
-        className='p-3 border border-0 rounded shadow '
+        className='p-3 border border-0 rounded bg-light shadow '
         style={{ minHeight: 222.8 }}
       >
         <h4>{offer}</h4>

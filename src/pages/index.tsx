@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Inter, Mouse_Memoirs } from "next/font/google";
 import { motion, useMotionValueEvent } from "framer-motion";
 import { useScroll } from "framer-motion";
 // import styles from '@/styles/Home.module.css'
@@ -26,10 +26,13 @@ import MostPopular from "@/compnents/MostPopular";
 import BannerIconSection from "@/compnents/BannerIconSection";
 import DiscountedSection from "@/compnents/DiscountedSection";
 import OurTeamSection from "@/compnents/OurTeamSection";
+import { faMousePointer } from "@fortawesome/free-solid-svg-icons";
 type products = {
   name: string;
   img: string;
 }[];
+
+
 export default function Home() {
   return (
     <>
